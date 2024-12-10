@@ -10,7 +10,7 @@ const HomePage = () => {
     
   return (
     <>
-    <div className="h-full p-20 grid xl:grid-cols-[70%,28%]  gap-5 font-redhat">
+    <div className="h-full py-20 md:px-20 px-8 grid xl:grid-cols-[70%,28%]  xl:gap-5 gap-12 font-redhat">
       <div className="container m-auto">
         <h1 className="font-bold text-[40px] tracking-wide">Desserts</h1>
         {/* Product Listings */}
@@ -29,9 +29,9 @@ const HomePage = () => {
 }
 
 const productLoader = async () => {
-    // const res = await fetch('/products');
+    const res = await fetch('/products');
     // For online data fetching since proxy not working on vercel
-    const res = await fetch('/api/products');
+    // const res = await fetch('/api/products');
     if(!res.ok)
         throw new Error(`There was a problem fetching the product list. Error code: ${res.status}`)
     return await res.json();

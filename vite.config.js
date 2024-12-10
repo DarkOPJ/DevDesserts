@@ -8,7 +8,8 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/products": {
-        target: "http://localhost:4000/products",
+        // target: "http://localhost:4000/products",
+        target: "https://jsondevdessert.onrender.com/products",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/products/, ""),
       },

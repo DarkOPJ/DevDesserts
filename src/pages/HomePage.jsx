@@ -29,7 +29,9 @@ const HomePage = () => {
 }
 
 const productLoader = async () => {
-    const res = await fetch('/products');
+    // const res = await fetch('/products');
+    // For online data fetching since proxy not working on vercel
+    const res = await fetch('https://jsondevdessert.onrender.com/products');
     if(!res.ok)
         throw new Error(`There was a problem fetching the product list. Error code: ${res.status}`)
     return await res.json();

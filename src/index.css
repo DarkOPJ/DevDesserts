@@ -1,0 +1,32 @@
+
+@font-face {
+    font-family: 'RedHatText';
+    src: url('./assets/fonts/static/RedHatText-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RedHatText';
+    src: url('./assets/fonts/static/RedHatText-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RedHatText';
+    src: url('./assets/fonts/static/RedHatText-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.itemAndPrice{
+    @apply font-semibold text-lg;
+}
+
+body{
+    @apply bg-creme/5;
+}
